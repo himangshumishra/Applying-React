@@ -12,14 +12,13 @@ function App() {
   const darkTheme = () => {
     setThemeMode('dark')
   }
-  
 
   // actual change in theme
 
   useEffect(() => {
-    let rmv = document.querySelector('html').classList;
-    rmv.remove("light", "dark")
-    rmv.add(themeMode)
+    let htmlSelect = document.querySelector('html').classList;
+    htmlSelect.remove("light", "dark")
+    htmlSelect.add(themeMode)
 
   }, [themeMode])
   return (
